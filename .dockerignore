@@ -1,0 +1,10 @@
+.git
+.dockerignore
+/.idea
+/.vscode
+/.cloudbase
+Dockerfile*
+composer*
+container.config.json
+LICENSE
+README.md
