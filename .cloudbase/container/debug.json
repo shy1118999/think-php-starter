@@ -1,0 +1,12 @@
+{
+  "containers": [
+    {
+      "name": "think-php-starter",
+      "containerId": "eb7c3d8e963ef4c838f5ff4337788317ce43dcf03e3010a68bd24f476c2214c0",
+      "domain": "",
+      "ip": "",
+      "mode": "compose"
+    }
+  ],
+  "config": {}
+}
