@@ -1,0 +1,11 @@
+@host = http://localhost:27081/api
+
+
+### 登录
+POST {{host}}/login
+Content-Type: application/json
+
+{
+    "username": "10000",
+    "password": "123456"
+}

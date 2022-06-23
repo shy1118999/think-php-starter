@@ -1,0 +1,6 @@
+@host = http://localhost:27081/api
+@token = eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2NTYwNjI0MTcsImlkIjoiMDAwMDByIn0.Xys3JmPGOnHQdiHMrXG2g6CWcN1C_RcR8pLVmOplPjs
+
+### 获取用户信息(自己)
+GET {{host}}/user/info
+Token: {{token}}
