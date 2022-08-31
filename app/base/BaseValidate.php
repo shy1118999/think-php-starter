@@ -3,7 +3,7 @@
  * @Author: shaohang-shy
  * @Date: 2022-06-23 15:36:18
  * @LastEditors: shaohang-shy
- * @LastEditTime: 2022-06-23 15:36:24
+ * @LastEditTime: 2022-08-31 18:40:31
  * @Description: Base Validate
  */
 
@@ -15,13 +15,23 @@ use think\facade\Request;
 
 class BaseValidate extends Validate
 {
+    protected $rule = [];
+    protected $message = [];
+    public function __construct($rule = [], $message = [])
+    {
+        parent::__construct();
+        $this->rule = array_merge($this->rule, $rule);
+        $this->message = array_merge($this->message, $message);
+    }
     /***
      * 验证方法
      */
-    public function gocheck()
+    public function gocheck($param = [])
     {
-        $request = Request::instance();
-        $param = $request->param();
+        if (empty($param)) {
+            $request = Request::instance();
+            $param = $request->param();
+        }
 
         $res = $this->batch()->check($param);
 
